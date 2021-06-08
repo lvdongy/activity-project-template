@@ -1,0 +1,22 @@
+@mixin bg($url, $h: 100%) {
+    background: url($url) no-repeat;
+    background-size: 100% $h;
+}
+@mixin abs($top: auto, $left: auto, $right: auto, $bottom: auto) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+@mixin flex ($j: center, $a: center, $wrap: nowrap){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-wrap: $wrap;
+}
+@mixin bg-pc {
+    background-size: cover;
+    background-clip: content-box;
+    background-origin: content-box;
+}

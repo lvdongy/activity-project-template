@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--设置浏览器渲染模式优先为最新-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--360默认极速模式-->
+    <meta name="renderer" content="webkit">
+    <!--移动端头部兼容-->
+    <!--适应移动端页面-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--移动端全屏兼容，针对一些不支持viewport浏览器，例如黑莓-->
+    <meta name="HandheldFriendly" content="true">
+    <!--微软老浏览器-->
+    <meta name="MobileOptimized" content="320">
+    <!--去除window Phone点击高光-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--safari默认控件设置，会隐藏ios工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--iOS WebApp模式下的顶部信号栏颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--忽略页面中的电话号码数字和邮件链接-->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <!--横竖屏设置-->
+    <!--移动端模竖屏设置（portrait [默认] 纵向；landscape 横向；user 用户当前首选方向）-->
+    <!--uc-->
+    <meta name="screen-orientation" content="portrait">
+    <!--QQ-->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="keywords">
+    <meta name="description">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div id="app">
+        <h1 class="title">{{title}}</h1>
+        <!-- <img src="<%= require('./images/0-bg-m.png')%>" alt=""> -->
+        <div class="bg"></div>
+    </div>
+</body>
+</html>
