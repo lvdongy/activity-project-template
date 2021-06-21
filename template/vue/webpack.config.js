@@ -76,7 +76,13 @@ module.exports = {
                             }
                         }
                     },
-                    'sass-loader'
+                    'sass-loader',
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [path.join(__dirname, 'src/css/mixins.scss')],
+                        }
+                    },
                 ]
             },
             {
@@ -166,6 +172,7 @@ module.exports = {
         alias: {
             // 修改Vue倍导入时包的路径
             'vue$' : 'vue/dist/vue.esm.js',
+            '@': path.join(__dirname, 'src'),
         }
     },
 }
