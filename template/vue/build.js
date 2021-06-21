@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const webpackConfig = require('./webpack.config');
 const env = process.env.NODE_ENV;
-
+console.clear();
 if(env  === 'development'){
     const dev = webpackConfig.devServer;
     console.log(chalk.bgGreen.rgb(30, 30, 30)(' successful! '));
