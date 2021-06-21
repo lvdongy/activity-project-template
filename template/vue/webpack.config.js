@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NyanProgressPlugin = require('nyan-progress-webpack-plugin');
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const env = process.env.NODE_ENV;
 const { cdnPath, serverPath } = require('./config.js');
@@ -32,7 +33,7 @@ module.exports = {
         host: '0.0.0.0', // 0.0.0.0
         port: 4399,
         useLocalIp: true,
-        compress: false,
+        compress: true,
         hot: true,
         open: true,
         // proxy: {
@@ -45,6 +46,10 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
@@ -118,6 +123,8 @@ module.exports = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+
+        new VueLoaderPlugin(),
 
         new NyanProgressPlugin({
             nyanCatSays: function(progress, messages){
